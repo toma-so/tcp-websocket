@@ -1,7 +1,7 @@
 {
   "name": "@toma.so/tcp-websocket",
   "description": "A WebSocket client-only class made with TCP streams.",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
