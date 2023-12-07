@@ -1,7 +1,7 @@
 {
-  "name": "tcp-websocket",
+  "name": "@toma.so/tcp-websocket",
   "description": "A WebSocket client-only class made with TCP streams.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -24,12 +24,12 @@
     "build:types": "bun x tsc"
   },
   "license": "MIT",
-  "author": "Mikkel RINGAUD <mikkel@milescode.dev> (https://github.com)",
+  "author": "Toma.so Team (Originally Mikkel RINGAUD <mikkel@milescode.dev>)",
   "repository": {
-    "url": "https://github.com/Vexcited/tcp-websocket",
+    "url": "https://github.com/toma-so/tcp-websocket",
     "type": "git"
   },
-  "bugs": "https://github.com/Vexcited/tcp-websocket/issues",
+  "bugs": "https://github.com/toma-so/tcp-websocket/issues",
   "keywords": [
     "bun",
     "tcp",
