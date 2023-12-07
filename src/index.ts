@@ -437,6 +437,22 @@ class TCPWebSocket extends EventEmitter {
       let buffer = Buffer.from(data, "utf8");
       return this.#frame(buffer, OPCODE.TEXT);
     }
+
+    if (data instanceof ArrayBuffer) {
+      let buffer = Buffer.from(data);
+      return this.#frame(buffer, OPCODE.BINARY);
+    }
+
+    if (ArrayBuffer.isView(data)) {
+      let buffer = Buffer.from(data.buffer);
+      return this.#frame(buffer, OPCODE.BINARY);
+    }
+
+    if (data instanceof Blob) {
+      data.arrayBuffer().then(buffer => {
+        return this.#frame(Buffer.from(buffer), OPCODE.BINARY);
+      });
+    }
   }
 
   public ping (message: string | Buffer): void {
