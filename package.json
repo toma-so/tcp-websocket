@@ -1,7 +1,7 @@
 {
-  "name": "@toma.so/tcp-websocket",
+  "name": "@toma.com/tcp-websocket",
   "description": "A WebSocket client-only class made with TCP streams.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -25,7 +25,7 @@
     "build:types": "bun x tsc"
   },
   "license": "MIT",
-  "author": "Toma.so Team (Originally Mikkel RINGAUD <mikkel@milescode.dev>)",
+  "author": "Toma.com Team (Originally Mikkel RINGAUD <mikkel@milescode.dev>)",
   "repository": {
     "url": "https://github.com/toma-so/tcp-websocket",
     "type": "git"
