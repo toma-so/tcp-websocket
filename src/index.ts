@@ -166,13 +166,11 @@ class TCPWebSocket extends EventEmitter {
       data = response.chunk;
 
       if (response.informations.statusCode !== 101) {
-        throw new Error("expected status code 101");
-        // TODO: abort
+        return this.#fail(ERRORS.ABNORMAL_CLOSURE, "Invalid status code");
       }
 
       if (!response.informations.upgrade) {
-        throw new Error("not an upgrade");
-        // TODO: abort
+        return this.#fail(ERRORS.ABNORMAL_CLOSURE, "Not an upgrade");
       }
 
       // const digest = createHash('sha1')
